@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tabs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+	.tabs li {
+		background: url(../images/icons/tabs_black.png) repeat-x top left;
+		color: #fff;
+		height: 26px;
+		display: block;
+	}
+	.tabs li:hover {
+		background: url(../images/icons/tabs_blue.png) repeat-x top left;
+	}
+	
+		.tabs li:first-child:before {
+			content: " ";
+			width: 12px;
+			height: 26px;
+			display: block;
+			background: url(../images/icons/tabCorner_black_left.png) no-repeat top left;
+		}
+
