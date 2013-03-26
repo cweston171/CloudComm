@@ -81,7 +81,9 @@
 			$('#action_useDialPad').button();
 			$('#action_volumeControl').button();
 			
-			$('div.currActionsList').jScrollPane();
+			$('div.currActionsList').jScrollPane({
+				contentWidth: '0px'
+			});
 		});
 	</script>
 </body>

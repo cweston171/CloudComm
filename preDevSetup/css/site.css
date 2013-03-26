@@ -145,6 +145,7 @@ body {
 		display:block;
 		float: right;
 		background: #dddddd;
+		overflow-x: hidden;
 	}
 	.curr_actions_hdr {
 		padding: 8px;

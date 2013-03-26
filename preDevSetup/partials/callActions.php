@@ -2,7 +2,7 @@
     <div class="curr_actions_hdr">
         Actions
     </div>
-    <div class="currActionsList" style="height: 415px;overflow:hidden;">
+    <div class="currActionsList" style="height: 415px;overflow-x:hidden;">
         <ul>
             <li>
                 <button id="action_endCall" class="MB10 actionsBtn">
