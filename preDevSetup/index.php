@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>VoiceWorx - Template</title>
+<title>Cloud Comm - Template</title>
 <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
@@ -11,6 +11,7 @@
 <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
 <script type="text/javascript" src="scripts/additional-methods.min.js"></script>
 <script type="text/javascript" src="scripts/label_over.js"></script>
+<script type="text/javascript" src="scripts/jquery.cloud-comm-1.0.0.js"></script>
 <link href="css/plugins/jquery-ui-1.10.1.custom.css" rel="stylesheet" type="text/css">
 <link href="css/plugins/jquery.jscrollpane.css" rel="stylesheet" type="text/css">
 <link href="css/reset.css" rel="stylesheet" type="text/css">
@@ -84,6 +85,8 @@
 			$('div.currActionsList').jScrollPane({
 				contentWidth: '0px'
 			});
+			
+			alert($.fn.settings.onCall);
 		});
 	</script>
 </body>
