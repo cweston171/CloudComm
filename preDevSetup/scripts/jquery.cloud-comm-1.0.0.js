@@ -93,7 +93,8 @@ try {
 	$.fn.transferCall = function(vars){};
 	
 	
-	//
+	// navigation control
+	$.fn.loadContent = function(vars){};
 	
 })(jQuery);
 
