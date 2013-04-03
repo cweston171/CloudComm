@@ -66,11 +66,11 @@
                 		
                     	<div class="left width50">
                         	<h2>Comments</h2>
-                            <textarea id="comments" cols="35" rows="6" style="padding: 5px;">Establish call to add comments.</textarea>
+                            <textarea id="comments" disabled cols="35" rows="6" style="padding: 5px;">Establish call to add comments.</textarea>
                         </div>
                         <div class="left width50">
                         	<h2>Conference Participants:</h2>
-                            <textarea id="conferenceParticipants" cols="35" rows="6" style="padding: 5px;"></textarea>
+                            <textarea id="conferenceParticipants" disabled cols="35" rows="6" style="padding: 5px;"></textarea>
                         </div>
                     	
                         <div class="clear"></div>

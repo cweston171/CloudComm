@@ -23,14 +23,22 @@
 
 <body>
 <!-- wrapper -->
+<div id="loaderLayover">
+	<img src="images/ajax-loader.gif" alt="Loading..." />
+    <br/>
+    Loading...
+</div>
+<div id="loaderBgLayover"></div>
 <div id="wrapper" align="center">
 	<!-- header -->
     <div id="header">
     	<div class="hardWidth center">
             <div id="logo">
-                <a href="#">
-                    <img src="images/logo.png" alt="VoiceWorx&trade;" />
+            	<div class="ico"></div>
+                <a class="txt" href="#">
+                    <span><b>Cloud</b>Comm</span>
                 </a>
+                <div class="clear"></div>
             </div>
             <!-- currcall floater -->
             <!-- options menu -->
@@ -40,6 +48,7 @@
                 <li>Accnt: [name]</li>
             </ul>
             <!-- /options menu -->
+            <div class="clear"></div>
         </div>
     </div>
     <!-- /header -->
@@ -86,7 +95,7 @@
 				contentWidth: '0px'
 			});
 			
-			alert($.fn.settings.onCall);
+			$.fn.loader("hide");
 		});
 	</script>
 </body>

@@ -1,6 +1,6 @@
 <ul>
-    <li>
-        <a href="#">
+    <li id="summary_btn" class="mainAction">
+        <a href="#" onClick="$.fn.loadSummary();return false;">
             <span class="img">
                 <img src="images/icons/summary.png" alt="Summary" style="margin-top: 3px;" />
             </span>
@@ -10,8 +10,8 @@
             <div class="clear"></div>
         </a>
     </li>
-    <li class="active">
-        <a href="#">
+    <li id="currCall_btn" class="active mainAction">
+        <a href="#" onClick="$.fn.loadCurrCall();return false;">
             <span class="img">
                 <img src="images/icons/currentCall.png" alt="Current Call" style="margin-top: 3px;" />
             </span>
@@ -21,8 +21,8 @@
             <div class="clear"></div>
         </a>
     </li>
-    <li>
-        <a href="#">
+    <li id="callBacks_btn" class="mainAction">
+        <a href="#" onClick="$.fn.loadCallbacks();return false;">
             <span class="img">
                 <img src="images/icons/callbacks.png" alt="Callbacks" style="margin-top: 3px;" />
             </span>
@@ -32,8 +32,8 @@
             <div class="clear"></div>
         </a>
     </li>
-    <li>
-        <a href="#">
+    <li id="voicemail_btn" class="mainAction">
+        <a href="#" onClick="$.fn.loadVoicemail();return false;">
             <span class="img">
                 <img src="images/icons/voicemail.png" alt="Voicemail" style="margin-top: 3px;" />
             </span>
@@ -43,8 +43,8 @@
             <div class="clear"></div>
         </a>
     </li>
-    <li>
-        <a href="#">
+    <li id="sessHistory_btn" class="mainAction">
+        <a href="#" onClick="$.fn.loadSessHistory();return false;">
             <span class="img">
                 <img src="images/icons/sessionHistory.png" alt="Session History" style="margin-top: 3px;" />
             </span>
@@ -54,8 +54,8 @@
             <div class="clear"></div>
         </a>
     </li>
-    <li>
-        <a href="#">
+    <li id="contacts_btn" class="mainAction">
+        <a href="#" onClick="$.fn.loadContacts();return false;">
             <span class="img">
                 <img src="images/icons/contactsCRM.png" alt="Contacts (CRM)" style="margin-top: 3px;" />
             </span>

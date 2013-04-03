@@ -39,6 +39,7 @@ try {
 
 
 
+
 // custom jquery plugin
 (function($){
 	// global variables
@@ -50,6 +51,13 @@ try {
 	settings.isAdmin = false;
 	settings.isMobile = isMobile();
 	settings.hasFlash = hasFlash;
+	settings.mainActions = {};
+	settings.mainActions.summary = '#summary_btn';
+	settings.mainActions.currCall = '#currCall_btn';
+	settings.mainActions.callBacks = '#callBacks_btn';
+	settings.mainActions.voicemails = '#voicemail_btn';
+	settings.mainActions.sessHistory = '#sessHistory_btn';
+	settings.mainActions.contacts = '#contacts_btn';
 	
 	//////////////////////////////////////////
 	//////////// INITIALIZATION /////////////
@@ -60,6 +68,27 @@ try {
 			// require validated = true
 				// alert and redirect to login if not
 	};
+	
+	//////////////////////////////////
+	//////////// SPECIALS ///////////
+	$.fn.loader = function(action){
+		switch(action){
+			case "show":
+				$('#loaderLayover').show();
+				$('#loaderBgLayover').show();
+				break;
+			case "hide":
+				$('#loaderLayover').hide();
+				$('#loaderBgLayover').hide();
+				break;
+		}
+	}
+	
+	$.fn.swapMainAction = function(action){
+		$('.mainAction').removeClass('active');
+		$('"' + action + '"').addClass('active');
+	}
+	
 	
 	///////////////////////////////////////////////////////
 	///////////////  CALL CONTROL ////////////////////////
@@ -95,6 +124,85 @@ try {
 	
 	// navigation control
 	$.fn.loadContent = function(vars){};
+	
+	
+	////////////////////////////////////////////
+	/////////// MAIN ACTIONS BUTTONS //////////
+	$.fn.loadSummary = function(){
+		// if active call - save info before loading screen
+		// show loader overlay
+		$.fn.loader('show');
+		$('#screen').load('partials/summary/summary.php', function(){
+			$.fn.loader('hide');
+			// swap main action button
+			$.fn.swapMainAction(settings.mainAction.summary);
+		});
+	}
+	
+	$.fn.loadCurrCall = function(){
+		// if active call - save info before loading screen
+		// show loader overlay
+		$.fn.loader('show');
+		// load content
+		$('#screen').load('partials/currentCall/currCallCont.php', function(){
+			// hide loader
+			$.fn.loader('hide');
+			// swap main action button
+			$.fn.swapMainAction(settings.mainAction.currCall);
+		});
+	}
+	
+	$.fn.loadCallbacks = function(){
+		// if active call - save info before loading screen
+		// show loader overlay
+		$.fn.loader('show');
+		// load content
+		$('#screen').load('partials/callbacks/callbacks.php', function(){
+			// hide loader
+			$.fn.loader('hide');
+			// swap main action button
+			$.fn.swapMainAction(settings.mainAction.callBacks);
+		});
+	}
+	
+	$.fn.loadVoicemail = function(){
+		// if active call - save info before loading screen
+		// show loader overlay
+		$.fn.loader('show');
+		// load content 
+		$('#screen').load('partials/voicemail/voicemail.php', function(){
+			// hide loader
+			$.fn.loader('hide');
+			// swap main action button
+			$.fn.swapMainAction(settings.mainAction.voicemail);
+		});
+	}
+	
+	$.fn.loadSessHistory = function(){
+		// if active call - save info before loading screen
+		// show loader overlay
+		$.fn.loader('show');
+		// load content
+		$('#screen').load('partials/session/sessionHistory.php', function(){
+			// hide loader
+			$.fn.loader('hide');
+			// swap main action button
+			$.fn.swapMainAction(settings.mainActions.sessHistory);
+		});
+	}
+	
+	$.fn.loadContacts = function(){
+		// if active call - save info before loading screen
+		// show loader overlay
+		$.fn.loader('show');
+		// load content 
+		$('#screen').load('partials/contacts/contacts.php', function(){
+			// hide loader
+			$.fn.loader('hide');
+			// swap main action buttion
+			$.fn.swapMainAction(settings.mainActions.contacts);
+		});
+	}
 	
 })(jQuery);
 
