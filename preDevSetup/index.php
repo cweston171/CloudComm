@@ -19,6 +19,7 @@
 <link href="css/widgets.css" rel="stylesheet" type="text/css">
 <link href="css/forms.css" rel="stylesheet" type="text/css">
 <link href="css/buttons_icons.css" rel="stylesheet" type="text/css">
+<link href="css/tabs.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -42,11 +43,7 @@
             </div>
             <!-- currcall floater -->
             <!-- options menu -->
-            <ul id="options_menu">
-                <li>Options</li>
-                <li>Help</li>
-                <li>Accnt: [name]</li>
-            </ul>
+            <?php include('partials/optionsMenu.php'); ?>
             <!-- /options menu -->
             <div class="clear"></div>
         </div>

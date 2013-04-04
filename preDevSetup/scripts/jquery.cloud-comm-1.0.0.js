@@ -55,7 +55,7 @@ try {
 	settings.mainActions.summary = '#summary_btn';
 	settings.mainActions.currCall = '#currCall_btn';
 	settings.mainActions.callBacks = '#callBacks_btn';
-	settings.mainActions.voicemails = '#voicemail_btn';
+	settings.mainActions.voicemail = '#voicemail_btn';
 	settings.mainActions.sessHistory = '#sessHistory_btn';
 	settings.mainActions.contacts = '#contacts_btn';
 	
@@ -86,7 +86,7 @@ try {
 	
 	$.fn.swapMainAction = function(action){
 		$('.mainAction').removeClass('active');
-		$('"' + action + '"').addClass('active');
+		$(action).addClass('active');
 	}
 	
 	
@@ -135,7 +135,7 @@ try {
 		$('#screen').load('partials/summary/summary.php', function(){
 			$.fn.loader('hide');
 			// swap main action button
-			$.fn.swapMainAction(settings.mainAction.summary);
+			$.fn.swapMainAction(settings.mainActions.summary);
 		});
 	}
 	
@@ -148,7 +148,7 @@ try {
 			// hide loader
 			$.fn.loader('hide');
 			// swap main action button
-			$.fn.swapMainAction(settings.mainAction.currCall);
+			$.fn.swapMainAction(settings.mainActions.currCall);
 		});
 	}
 	
@@ -161,7 +161,7 @@ try {
 			// hide loader
 			$.fn.loader('hide');
 			// swap main action button
-			$.fn.swapMainAction(settings.mainAction.callBacks);
+			$.fn.swapMainAction(settings.mainActions.callBacks);
 		});
 	}
 	
@@ -174,7 +174,7 @@ try {
 			// hide loader
 			$.fn.loader('hide');
 			// swap main action button
-			$.fn.swapMainAction(settings.mainAction.voicemail);
+			$.fn.swapMainAction(settings.mainActions.voicemail);
 		});
 	}
 	
