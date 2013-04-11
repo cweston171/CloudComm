@@ -8,5 +8,12 @@
         </ul>
     </li>
     <li>Help</li>
-    <li>Accnt: [name]</li>
+    <li>
+    	Accnt: [name]
+        <ul>
+        	<li>Test</li>
+        	<li>Test</li>
+        	<li>Test</li>
+        </ul>
+    </li>
 </ul><em></em>

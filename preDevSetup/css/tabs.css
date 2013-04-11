@@ -15,38 +15,41 @@
 		padding: 4px 20px;
 		position: relative;
 		min-height: 24px;
+		cursor: pointer;
 	}
 	#options_menu li:hover {
-		background: #fff;
+		background: darkblue;
+		color: #fff;
 	}
 	
-	#options_menu li > ul {
+	#options_menu li ul {
 		display: none;
 		position: absolute;
 		top: 100%;
 		left: 0;
 		background: #DDEBF7;
-		z-index: 1000;
+		z-index: 5000;
 		margin: 0;
 		padding: 0;
 		min-width: 120px;
 		border: 1px solid #06C;
 	}
-	#options_men li:hover > ul {
+	#options_menu li:hover ul {
 		display: block;
 	}
-	#options_menu li > ul li {
+	#options_menu li ul li {
 		display: block;
 		width: 90%;
 		padding: 4px 6px;
 		color: #282828;
 		cursor: pointer;
-		height: 10px;
+		text-align: left;
 	}
-		#options_menu li > ul li:hover {
+		#options_menu li ul li:hover {
 			background: #fff;
+			color: #282828;
 		}
-		#options_menu li > ul li a {
+		#options_menu li ul li a {
 			color: #282828;
 			text-decoration: none;
 		}
