@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* JSCROLL PANE OVERRIDES */
+.jspVerticalBar {
+	width: 8px;
+}
+
+.jspDrag {
+	background-color: #2f2f2f;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.jspTrack {
+	background-color: #c2c2c2;
+}
+
+/* JQUERY UI OVERRIDES */
+.ui-widget-content {
+	background: none;
+	border: none;
+}
+
+
+
+
+/* layout */
+#loaderLayover {
+	width: 200px;
+	height: 80px;
+	display: block;
+	position: absolute;
+	z-index: 9999;
+	top: 50%;
+	left: 50%;
+	margin-left: -80px;
+	margin-top: -40px;
+	text-align: center;
+	background: #fff;
+	padding: 10px 20px;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border: 3px solid #d4d4d4;
+}
+#loaderBgLayover {
+	background-color: #000;
+	opacity: .75;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9998;
+}
