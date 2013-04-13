@@ -27,7 +27,7 @@
 <div id="loaderLayover">
 	<img src="images/ajax-loader.gif" alt="Loading..." />
     <br/>
-    Loading...
+    <span id="loadText">Loading...</span>
 </div>
 <div id="loaderBgLayover"></div>
 <div id="wrapper" align="center">
@@ -71,22 +71,12 @@
     <!-- /body container -->
     <script type="text/javascript">
 		$(function(){
-			// initialize buttons
-			$('#action_endCall').button();
-			$('#action_recordCall').button();
-			$('#action_holdCall').button();
-			$('#action_parkCall').button();
-			$('#action_transferCall').button();
-			$('#action_addConferencePartner').button();
-			$('#action_leaveConference').button();
-			$('#action_startWorksheet').button();
-			$('#action_manualConnection').button();
-			$('#action_setDisposition').button();
-			$('#action_selectContactRecord').button();
-			$('#action_atEndSwitchTo').button();
-			$('#action_callCustomer').button();
-			$('#action_useDialPad').button();
-			$('#action_volumeControl').button();
+			// initialize CloudComm
+			$.fn.InitCloudComm({
+				userValidated: true,
+				userName: "Chase",
+				isAdmin: false
+			});
 			
 			$('div.currActionsList').jScrollPane({
 				contentWidth: '0px'

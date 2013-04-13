@@ -45,6 +45,7 @@ try {
 	// global variables
 	window.settings = {};
 	settings.userValidated = false;
+	settings.userName = "";
 	settings.onCall = false;
 	settings.onHold = false;
 	settings.conference = false;
@@ -58,29 +59,113 @@ try {
 	settings.mainActions.voicemail = '#voicemail_btn';
 	settings.mainActions.sessHistory = '#sessHistory_btn';
 	settings.mainActions.contacts = '#contacts_btn';
+	settings.callActions = {};
+	settings.callActions.endCall = '#action_endCall';
+	settings.callActions.recordCall = '#action_recordCall';
+	settings.callActions.holdCall = '#action_holdCall';
+	settings.callActions.parkCall = '#action_parkCall';
+	settings.callActions.transferCall = '#action_transferCall';
+	settings.callActions.addConfPartner = '#action_addConferencePartner';
+	settings.callActions.leaveConf = '#action_leaveConference';
+	settings.callActions.startWorksheet = '#action_startWorksheet';
+	settings.callActions.setDisp = '#action_setDisposition';
+	settings.callActions.manConn = '#action_manualConnection';
+	settings.callActions.selContactRec = '#action_selectContactRecord';
+	settings.callActions.atEndSwitch = '#action_atEndSwitchTo';
+	settings.callActions.callCust = '#action_callCustomer';
+	settings.callActions.useDialPad = '#action_useDialPad';
+	settings.callActions.volControl = '#action_volumeControl';
 	
 	//////////////////////////////////////////
 	//////////// INITIALIZATION /////////////
 	
 	//**** none of this should be accessible if mobile -- will have to check before doing all the initialization.
-	$.fn.InitCloudComm = function(settings){
-		// update settings
-			// require validated = true
-				// alert and redirect to login if not
+	$.fn.InitCloudComm = function(initSet){
+		$.fn.loader('show', 'Initializing CloudComm...');
+		
+		if(initSet.userValidated){
+			settings.userValidated = true;
+			settings.userName = initSet.userName;
+			settings.isAdmin = initSet.isAdmin;
+			
+			$.fn.initMainActions($.fn.initCallActions($.fn.loadSummary()));
+		} else {
+			settings.userValidated = false;
+			// redirect to login
+		}
+	};
+	
+	$.fn.initMainActions = function(callback){
+		// first unbind any live actions
+		$.fn.unbindActions(settings.mainActions, 'click', function(){
+			// now rebind them
+			$.fn.bindMainActions();
+		});
+	}
+	
+	$.fn.initCallActions = function(callback){
+		$.fn.unbindActions(settings.callActions, 'click');
+		$.fn.makeButton(settings.callActions);
+	}
+	
+	$.fn.unbindActions = function(elem, action, callback){
+		$.each(elem, function(key, value){
+			$(value).unbind(action);
+		});
+		
+		if(callback != null){
+			callback.call();
+		}
+	}
+	$.fn.bindMainActions = function(callback){
+		$(settings.mainActions.summary).click(function(){
+			$.fn.loadSummary();
+		});
+		$(settings.mainActions.currCall).click(function(){
+			$.fn.loadCurrCall();
+		});
+		$(settings.mainActions.callBacks).click(function(){
+			$.fn.loadCallbacks();
+		});
+		$(settings.mainActions.voicemail).click(function(){
+			$.fn.loadVoicemail();
+		});
+		$(settings.mainActions.sessHistory).click(function(){
+			$.fn.loadSessHistory();
+		});
+		$(settings.mainActions.contacts).click(function(){
+			$.fn.loadContacts();
+		});
+		
+		if(callback != null){
+			callback.call();
+		}
+	}
+	$.fn.makeButton = function(elem){
+		$.each(elem, function(k, v){
+			$(v).button();
+		});
 	};
 	
 	//////////////////////////////////
 	//////////// SPECIALS ///////////
-	$.fn.loader = function(action){
-		switch(action){
-			case "show":
-				$('#loaderLayover').show();
-				$('#loaderBgLayover').show();
-				break;
-			case "hide":
-				$('#loaderLayover').hide();
-				$('#loaderBgLayover').hide();
-				break;
+	$.fn.loader = function(action, message){
+		if(message != null){
+			$('#loadText').html(message);
+		} else {
+			$('#loadText').html('Loading...');
+		}
+		if(action != null){
+			switch(action){
+				case "show":
+					$('#loaderLayover').show();
+					$('#loaderBgLayover').show();
+					break;
+				case "hide":
+					$('#loaderLayover').hide();
+					$('#loaderBgLayover').hide();
+					break;
+			}
 		}
 	}
 	
@@ -122,16 +207,13 @@ try {
 	$.fn.transferCall = function(vars){};
 	
 	
-	// navigation control
-	$.fn.loadContent = function(vars){};
-	
 	
 	////////////////////////////////////////////
 	/////////// MAIN ACTIONS BUTTONS //////////
 	$.fn.loadSummary = function(){
 		// if active call - save info before loading screen
 		// show loader overlay
-		$.fn.loader('show');
+		$.fn.loader('show', 'Loading Summary...');
 		$('#screen').load('partials/summary/summary.php', function(){
 			$.fn.loader('hide');
 			// swap main action button
@@ -142,20 +224,26 @@ try {
 	$.fn.loadCurrCall = function(){
 		// if active call - save info before loading screen
 		// show loader overlay
-		$.fn.loader('show');
+		$.fn.loader('show', 'Loading Current Call...');
 		// load content
 		$('#screen').load('partials/currentCall/currCallCont.php', function(){
 			// hide loader
 			$.fn.loader('hide');
 			// swap main action button
 			$.fn.swapMainAction(settings.mainActions.currCall);
+			
+			// initialize any buttons/actions needed for this page
+			// form
+			
+			// tabs
+			
 		});
 	}
 	
 	$.fn.loadCallbacks = function(){
 		// if active call - save info before loading screen
 		// show loader overlay
-		$.fn.loader('show');
+		$.fn.loader('show', 'Loading Callbacks...');
 		// load content
 		$('#screen').load('partials/callbacks/callbacks.php', function(){
 			// hide loader
@@ -168,7 +256,7 @@ try {
 	$.fn.loadVoicemail = function(){
 		// if active call - save info before loading screen
 		// show loader overlay
-		$.fn.loader('show');
+		$.fn.loader('show', 'Loading Voicemail...');
 		// load content 
 		$('#screen').load('partials/voicemail/voicemail.php', function(){
 			// hide loader
@@ -181,7 +269,7 @@ try {
 	$.fn.loadSessHistory = function(){
 		// if active call - save info before loading screen
 		// show loader overlay
-		$.fn.loader('show');
+		$.fn.loader('show', 'Loading Session History...');
 		// load content
 		$('#screen').load('partials/session/sessionHistory.php', function(){
 			// hide loader
@@ -194,7 +282,7 @@ try {
 	$.fn.loadContacts = function(){
 		// if active call - save info before loading screen
 		// show loader overlay
-		$.fn.loader('show');
+		$.fn.loader('show', 'Loading Contacts...');
 		// load content 
 		$('#screen').load('partials/contacts/contacts.php', function(){
 			// hide loader

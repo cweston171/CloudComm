@@ -18,7 +18,7 @@ input, select, textarea {
 	position: absolute;
 	top: 2px;
 	left: 5px;
-	color: #ccc;
+	color: #999;
 }
 
 .field input[type="text"].inputBox,
