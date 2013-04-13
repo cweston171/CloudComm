@@ -24,3 +24,33 @@
 	border: none;
 }
 
+
+
+
+/* layout */
+#loaderLayover {
+	width: 200px;
+	height: 80px;
+	display: block;
+	position: absolute;
+	z-index: 9999;
+	top: 50%;
+	left: 50%;
+	margin-left: -80px;
+	margin-top: -40px;
+	text-align: center;
+	background: #fff;
+	padding: 10px 20px;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border: 3px soid #d4d4d4;
+}
+#loaderBgLayover {
+	background-color: #000;
+	opacity: .75;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9998;
+}
