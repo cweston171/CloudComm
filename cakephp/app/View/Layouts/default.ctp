@@ -92,7 +92,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                             <label for="username" class="over">Username:</label>
                             <input id="username" name="username" type="text" value="" class="inputBox" />
                         </div>
-                        <div class="field width70 center MB20">
+                        <div class="field width70 center MB30">
                             <label for="password" class="over">Password:</label>
                             <input id="password" name="password" type="password" value="" class="inputBox" />
                         </div>

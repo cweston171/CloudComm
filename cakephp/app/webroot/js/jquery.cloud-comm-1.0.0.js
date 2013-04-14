@@ -60,7 +60,11 @@ try {
 
         $('label').labelOver('over');
 
-        $(settings.buttons.login).button().click(function(){
+        $(settings.buttons.login).button({
+            text: true,
+            icons: {
+                primary: "login_btn"   // Custom icon
+            }}).click(function(){
             // check form
             var errors = false;
             if($(settings.fields.username).val() == ""){
