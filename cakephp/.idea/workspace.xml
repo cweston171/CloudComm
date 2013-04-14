@@ -4,11 +4,14 @@
     <list default="true" id="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" name="Default" comment="" />
     <ignored path="cakephp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365893299143" ignored="false" />
-    <file path="/site.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365892140699" ignored="false" />
-    <file path="/widgets.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365892170558" ignored="false" />
+    <file path="/Dummy.txt" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365908315888" ignored="false" />
+    <file path="/site.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365910512189" ignored="false" />
+    <file path="/widgets.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365914452066" ignored="false" />
     <file path="/home.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365892464258" ignored="false" />
     <file path="/LoginModel.php" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365894035194" ignored="false" />
+    <file path="/default.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365913900112" ignored="false" />
+    <file path="/jquery.cloud-comm-1.0.0.js" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365912912457" ignored="false" />
+    <file path="/forms.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365913154481" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,29 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="widgets.css" pinned="false" current="true" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="121" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.44651163">
+                    <folding>
+                      <element signature="e#1023#1686#2" expanded="true" />
+                      <element signature="e#4633#5380#2" expanded="true" />
+                      <element signature="e#6398#7145#2" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="cakephp" />
@@ -31,7 +57,7 @@
       <file leaf-file-name="PagesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-9.692307">
+            <state line="46" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-9.038462">
               <folding />
             </state>
           </provider>
@@ -40,7 +66,7 @@
       <file leaf-file-name="AppModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/AppModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,13 +75,15 @@
       <file leaf-file-name="home.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Pages/home.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
+            <state line="16" column="48" selection-start="622" selection-end="622" vertical-scroll-proportion="-0.65384614">
               <folding>
                 <marker date="1365789274877" expanded="true" signature="866:1006" placeholder="..." />
-                <marker date="1365789274877" expanded="true" signature="1128:1162" placeholder="..." />
+                <marker date="1365789274877" expanded="false" signature="1128:1162" placeholder="..." />
+                <marker date="1365789274877" expanded="true" signature="1163:1575" placeholder="..." />
                 <marker date="1365789274877" expanded="true" signature="1163:1575" placeholder="..." />
                 <marker date="1365789274877" expanded="true" signature="1357:1368" placeholder="..." />
-                <marker date="1365789274877" expanded="true" signature="1521:1532" placeholder="..." />
+                <marker date="1365789274877" expanded="false" signature="1357:1368" placeholder="..." />
+                <marker date="1365789274877" expanded="false" signature="1521:1532" placeholder="..." />
                 <marker date="1365789274877" expanded="true" signature="1579:1940" placeholder="..." />
                 <marker date="1365789274877" expanded="true" signature="1944:2240" placeholder="..." />
                 <marker date="1365789274877" expanded="true" signature="2244:2713" placeholder="..." />
@@ -86,10 +114,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="40" selection-start="897" selection-end="897" vertical-scroll-proportion="0.17709564">
+            <state line="84" column="36" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.23730814">
+              <folding>
+                <element signature="e#4088#4113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="18" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/css/forms.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="16" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.cloud-comm-1.0.0.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="65" selection-start="2299" selection-end="2299" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,12 +167,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/webroot/css/site.css" />
         <option value="$PROJECT_DIR$/app/webroot/css/tabs.css" />
-        <option value="$PROJECT_DIR$/app/webroot/css/widgets.css" />
         <option value="$PROJECT_DIR$/app/View/Pages/home.ctp" />
         <option value="$PROJECT_DIR$/app/Model/LoginModel.php" />
         <option value="$PROJECT_DIR$/app/Controller/PagesController.php" />
+        <option value="$PROJECT_DIR$/app/webroot/css/site.css" />
+        <option value="$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js" />
+        <option value="$PROJECT_DIR$/app/webroot/css/forms.css" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
+        <option value="$PROJECT_DIR$/app/webroot/css/widgets.css" />
       </list>
     </option>
   </component>
@@ -152,7 +212,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -199,52 +258,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,8 +272,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.fileTypes" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="CloudComm" serverId="5c243a0e-f9ff-4cba-881a-32b8b8e72e19">
     <servers>
@@ -274,7 +294,7 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="5c243a0e-f9ff-4cba-881a-32b8b8e72e19" server_name="CloudComm">
       <method />
     </configuration>
     <list size="0" />
@@ -309,23 +329,23 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24493062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -389,51 +409,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/AppModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/tabs.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="126" selection-end="126" vertical-scroll-proportion="0.08751459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="20" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.33530805">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="0" selection-start="3639" selection-end="3639" vertical-scroll-proportion="0.42473745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/forms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/buttons_icons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.04028436">
           <folding />
         </state>
       </provider>
@@ -443,10 +428,12 @@
         <state line="16" column="48" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1365789274877" expanded="true" signature="866:1006" placeholder="..." />
-            <marker date="1365789274877" expanded="true" signature="1128:1162" placeholder="..." />
+            <marker date="1365789274877" expanded="false" signature="1128:1162" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="1163:1575" placeholder="..." />
             <marker date="1365789274877" expanded="true" signature="1163:1575" placeholder="..." />
             <marker date="1365789274877" expanded="true" signature="1357:1368" placeholder="..." />
-            <marker date="1365789274877" expanded="true" signature="1521:1532" placeholder="..." />
+            <marker date="1365789274877" expanded="false" signature="1357:1368" placeholder="..." />
+            <marker date="1365789274877" expanded="false" signature="1521:1532" placeholder="..." />
             <marker date="1365789274877" expanded="true" signature="1579:1940" placeholder="..." />
             <marker date="1365789274877" expanded="true" signature="1944:2240" placeholder="..." />
             <marker date="1365789274877" expanded="true" signature="2244:2713" placeholder="..." />
@@ -476,6 +463,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="40" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#4088#4113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/tabs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="126" selection-end="126" vertical-scroll-proportion="0.08751459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="0" selection-start="3639" selection-end="3639" vertical-scroll-proportion="0.42473745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/buttons_icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.04028436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/AppModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -483,17 +505,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Pages/home.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="622" selection-end="622" vertical-scroll-proportion="-0.65384614">
+          <folding>
+            <marker date="1365789274877" expanded="true" signature="866:1006" placeholder="..." />
+            <marker date="1365789274877" expanded="false" signature="1128:1162" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="1163:1575" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="1163:1575" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="1357:1368" placeholder="..." />
+            <marker date="1365789274877" expanded="false" signature="1357:1368" placeholder="..." />
+            <marker date="1365789274877" expanded="false" signature="1521:1532" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="1579:1940" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="1944:2240" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="2244:2713" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="2717:3233" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="3701:4084" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="4482:4995" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="5061:5306" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="5370:5604" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="5608:5828" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="5898:6347" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="5904:6118" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="6124:6341" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="6416:6618" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="6622:6829" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="6835:8737" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="6841:7040" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="7046:7215" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="7221:7405" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="7411:7569" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="7575:7737" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="7743:7966" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="7972:8162" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="8168:8320" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="8326:8529" placeholder="..." />
+            <marker date="1365789274877" expanded="true" signature="8535:8731" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-9.692307">
+        <state line="46" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-9.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="65" selection-start="2299" selection-end="2299" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="18" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/forms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="16" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="40" selection-start="897" selection-end="897" vertical-scroll-proportion="0.17709564">
-          <folding />
+        <state line="84" column="36" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.23730814">
+          <folding>
+            <element signature="e#4088#4113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.44651163">
+          <folding>
+            <element signature="e#1023#1686#2" expanded="true" />
+            <element signature="e#4633#5380#2" expanded="true" />
+            <element signature="e#6398#7145#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

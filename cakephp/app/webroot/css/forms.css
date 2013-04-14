@@ -36,4 +36,13 @@ input, select, textarea {
 	-webkit-border-radius: 5px;
 	width: 98%;
 }
+    .field input[type="text"].inputBox.error,
+    .field input[type="password"].inputBox.error,
+    .field input[type="email"].inputBox.error,
+    .field input[type="checkbox"].inputBox.error,
+    .field textarea.inputBox.error,
+    .field select.inputBox.error {
+        border: 1px solid #fc0909;
+        background-color: #ffeaea;
+    }
 

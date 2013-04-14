@@ -42,46 +42,91 @@ try {
 
 // custom jquery plugin
 (function($){
-	// global variables
-	window.settings = {};
-	settings.userValidated = false;
-	settings.userName = "";
-	settings.onCall = false;
-	settings.onHold = false;
-	settings.conference = false;
-	settings.isAdmin = false;
-	settings.isMobile = isMobile();
-	settings.hasFlash = hasFlash;
-	settings.mainActions = {};
-	settings.mainActions.summary = '#summary_btn';
-	settings.mainActions.currCall = '#currCall_btn';
-	settings.mainActions.callBacks = '#callBacks_btn';
-	settings.mainActions.voicemail = '#voicemail_btn';
-	settings.mainActions.sessHistory = '#sessHistory_btn';
-	settings.mainActions.contacts = '#contacts_btn';
-	settings.callActions = {};
-	settings.callActions.endCall = '#action_endCall';
-	settings.callActions.recordCall = '#action_recordCall';
-	settings.callActions.holdCall = '#action_holdCall';
-	settings.callActions.parkCall = '#action_parkCall';
-	settings.callActions.transferCall = '#action_transferCall';
-	settings.callActions.addConfPartner = '#action_addConferencePartner';
-	settings.callActions.leaveConf = '#action_leaveConference';
-	settings.callActions.startWorksheet = '#action_startWorksheet';
-	settings.callActions.setDisp = '#action_setDisposition';
-	settings.callActions.manConn = '#action_manualConnection';
-	settings.callActions.selContactRec = '#action_selectContactRecord';
-	settings.callActions.atEndSwitch = '#action_atEndSwitchTo';
-	settings.callActions.callCust = '#action_callCustomer';
-	settings.callActions.useDialPad = '#action_useDialPad';
-	settings.callActions.volControl = '#action_volumeControl';
+
 	
 	//////////////////////////////////////////
 	//////////// INITIALIZATION /////////////
-	
+
+    $.fn.initCloudCommLogin = function(){
+        $.fn.loader('show', 'Loading CloudComm Login...');
+
+        // global variables
+        window.settings = {};
+        settings.buttons = {};
+        settings.buttons.login = "#login_btn";
+        settings.fields = {};
+        settings.fields.username = "#username";
+        settings.fields.password = "#password";
+
+        $('label').labelOver('over');
+
+        $(settings.buttons.login).button().click(function(){
+            // check form
+            var errors = false;
+            if($(settings.fields.username).val() == ""){
+                $(settings.fields.username).addClass('error');
+                errors = true;
+            } else {
+                $(settings.fields.username).removeClass('error');
+            }
+            if($(settings.fields.password).val() == ""){
+                $(settings.fields.password).addClass('error');
+                errors = true;
+            } else {
+                $(settings.fields.password).removeClass('error');
+            }
+
+            // submit form
+            if(!errors){
+                document.getElementById('#loginForm').submit();
+            }
+
+            return false;
+        });
+
+        // change body background color to match css for content_container
+        $('#wrapper').addClass('login');
+
+        $.fn.loader('hide');
+    }
+
 	//**** none of this should be accessible if mobile -- will have to check before doing all the initialization.
-	$.fn.InitCloudComm = function(initSet){
+	$.fn.initCloudComm = function(initSet){
 		$.fn.loader('show', 'Initializing CloudComm...');
+
+        // global variables
+        window.settings = {};
+        settings.userValidated = false;
+        settings.userName = "";
+        settings.onCall = false;
+        settings.onHold = false;
+        settings.conference = false;
+        settings.isAdmin = false;
+        settings.isMobile = isMobile();
+        settings.hasFlash = hasFlash;
+        settings.mainActions = {};
+        settings.mainActions.summary = '#summary_btn';
+        settings.mainActions.currCall = '#currCall_btn';
+        settings.mainActions.callBacks = '#callBacks_btn';
+        settings.mainActions.voicemail = '#voicemail_btn';
+        settings.mainActions.sessHistory = '#sessHistory_btn';
+        settings.mainActions.contacts = '#contacts_btn';
+        settings.callActions = {};
+        settings.callActions.endCall = '#action_endCall';
+        settings.callActions.recordCall = '#action_recordCall';
+        settings.callActions.holdCall = '#action_holdCall';
+        settings.callActions.parkCall = '#action_parkCall';
+        settings.callActions.transferCall = '#action_transferCall';
+        settings.callActions.addConfPartner = '#action_addConferencePartner';
+        settings.callActions.leaveConf = '#action_leaveConference';
+        settings.callActions.startWorksheet = '#action_startWorksheet';
+        settings.callActions.setDisp = '#action_setDisposition';
+        settings.callActions.manConn = '#action_manualConnection';
+        settings.callActions.selContactRec = '#action_selectContactRecord';
+        settings.callActions.atEndSwitch = '#action_atEndSwitchTo';
+        settings.callActions.callCust = '#action_callCustomer';
+        settings.callActions.useDialPad = '#action_useDialPad';
+        settings.callActions.volControl = '#action_volumeControl';
 		
 		if(initSet.userValidated){
 			settings.userValidated = true;
