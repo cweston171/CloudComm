@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365908315888" ignored="false" />
     <file path="/site.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365910512189" ignored="false" />
-    <file path="/widgets.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365914452066" ignored="false" />
+    <file path="/widgets.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365914817665" ignored="false" />
     <file path="/home.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365892464258" ignored="false" />
     <file path="/LoginModel.php" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365894035194" ignored="false" />
     <file path="/default.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365913900112" ignored="false" />
@@ -33,11 +33,11 @@
             <file leaf-file-name="widgets.css" pinned="false" current="true" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="121" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.44651163">
+                  <state line="112" column="18" selection-start="3515" selection-end="3515" vertical-scroll-proportion="0.26860467">
                     <folding>
                       <element signature="e#1023#1686#2" expanded="true" />
-                      <element signature="e#4633#5380#2" expanded="true" />
-                      <element signature="e#6398#7145#2" expanded="true" />
+                      <element signature="e#4634#5381#2" expanded="true" />
+                      <element signature="e#6399#7146#2" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -584,11 +584,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.44651163">
+        <state line="112" column="18" selection-start="3515" selection-end="3515" vertical-scroll-proportion="0.26860467">
           <folding>
             <element signature="e#1023#1686#2" expanded="true" />
-            <element signature="e#4633#5380#2" expanded="true" />
-            <element signature="e#6398#7145#2" expanded="true" />
+            <element signature="e#4634#5381#2" expanded="true" />
+            <element signature="e#6399#7146#2" expanded="true" />
           </folding>
         </state>
       </provider>
