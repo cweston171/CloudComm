@@ -632,6 +632,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="23" selection-start="3914" selection-end="3914" vertical-scroll-proportion="0.090697676">
@@ -640,13 +647,6 @@
             <element signature="e#4668#5415#2" expanded="true" />
             <element signature="e#6433#7180#2" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
