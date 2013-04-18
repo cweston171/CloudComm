@@ -18,7 +18,7 @@ class AgentsController extends AppController {
 	}
 
     public function login(){
-        
+        $this->layout = 'login';
     }
 
 /**

@@ -73,8 +73,14 @@ body {
         background: #282828;
         border-top: 1px solid grey;
     }
-
-#content { background-color: #fff;border: 1px solid #666; }
+    #content {
+        background-color: #fff;
+        border: 1px solid #666;
+    }
+    #content.login {
+        background: transparent !important;
+        border: none;
+    }
 	
 	.main_actions {
 		float: left;

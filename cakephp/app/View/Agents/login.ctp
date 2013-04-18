@@ -2,20 +2,25 @@
     <div class="tplc"></div><div class="tprc"></div><div class="btlc"></div><div class="btrc"></div>
     <div class="form">
         <?php echo $this->Form->create('Agent'); ?>
-        <div class="notice">Your session has expired. Log in now...</div>
-        <h2>Account Log In:</h2>
+        <div class="notice"><?php echo $this->Session->flash(); ?></div>
+        <h2 style="text-align: center;">Account Log In:</h2>
         <div class="formfields">
             <div class="field width70 center MB5">
-                <?php echo $this->Form->input('username'); ?>
+                <?php echo $this->Form->input('username', array('class'=>'inputBox','label' => array('class'=>'labelOver'))); ?>
             </div>
-            <div class="field width70 center MB5">
-                <?php echo $this->Form->input('password'); ?>
+            <div class="field width70 center MB30">
+                <?php echo $this->Form->input('password', array('class'=>'inputBox', 'label'=>array('class'=>'labelOver'))); ?>
             </div>
+            <button id="login_btn">Log In Now</button>
         </div>
-        <?php echo $this->Form->end(__('Login')); ?>
+        <?php echo $this->Form->end(); ?>
     </div>
-
-
+    <script type="text/javascript">
+        $(function(){
+            $.fn.initCloudCommLogin();
+        })
+    </script>
+<!--
     <div class="form">
         <form>
             <div class="notice">Your session has expired. Log in now...</div>
@@ -32,18 +37,6 @@
                 <button id="login_btn">Log In Now</button>
             </div>
         </form>
-    </div>
-</div>
-
-<div class="agents form">
-<?php echo $this->Form->create('Agent'); ?>
-    <fieldset>
-        <legend><?php echo __('Agent Login'); ?></legend>
-    <?php
-        echo $this->Form->input('username');
-        echo $this->Form->input('password');
-    ?>
-    </fieldset>
-<?php echo $this->Form->end(__('Login')); ?>
+    </div>-->
 </div>
  

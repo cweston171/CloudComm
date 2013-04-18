@@ -22,36 +22,36 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+    <?php echo $this->Html->charset(); ?>
+    <title>
+        <?php echo $cakeDescription ?>:
+        <?php echo $title_for_layout; ?>
+    </title>
+    <?php
+    echo $this->Html->meta('icon');
 
-        echo $this->Html->css('plugins/jquery.jscrollpane');
-        echo $this->Html->css('plugins/jquery-ui-1.10.1.custom');
-        echo $this->Html->css('reset');
-        echo $this->Html->css('buttons_icons');
-        echo $this->Html->css('site');
-        echo $this->Html->css('forms');
-        echo $this->Html->css('tabs');
-        echo $this->Html->css('widgets');
+    echo $this->Html->css('plugins/jquery.jscrollpane');
+    echo $this->Html->css('plugins/jquery-ui-1.10.1.custom');
+    echo $this->Html->css('reset');
+    echo $this->Html->css('buttons_icons');
+    echo $this->Html->css('site');
+    echo $this->Html->css('forms');
+    echo $this->Html->css('tabs');
+    echo $this->Html->css('widgets');
 
-        echo $this->Html->script('jquery-1.9.1.min');
-        echo $this->Html->script('jquery-ui-1.10.1.custom.min');
-        echo $this->Html->script('label_over');
-        echo $this->Html->script('additional-methods.min');
-        echo $this->Html->script('jquery.validate.min');
-        echo $this->Html->script('jquery.jscrollpane.min');
-        echo $this->Html->script('jquery.cloud-comm-1.0.0');
-        echo $this->Html->script('wheelIntent');
+    echo $this->Html->script('jquery-1.9.1.min');
+    echo $this->Html->script('jquery-ui-1.10.1.custom.min');
+    echo $this->Html->script('label_over');
+    echo $this->Html->script('additional-methods.min');
+    echo $this->Html->script('jquery.validate.min');
+    echo $this->Html->script('jquery.jscrollpane.min');
+    echo $this->Html->script('jquery.cloud-comm-1.0.0');
+    echo $this->Html->script('wheelIntent');
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
+    echo $this->fetch('meta');
+    echo $this->fetch('css');
+    echo $this->fetch('script');
+    ?>
 </head>
 <body>
 <div id="loaderLayover">
@@ -61,7 +61,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </div>
 <div id="loaderBgLayover"></div>
 <div id="wrapper">
-	<div id="container">
+    <div id="container">
         <!-- header -->
         <div id="header">
             <div class="hardWidth center">
@@ -72,34 +72,30 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                     </a>
                     <div class="clear"></div>
                 </div>
-                <!-- currcall floater -->
-                <!-- options menu -->
-                <?php //include('partials/optionsMenu.php'); ?>
-                <!-- /options menu -->
                 <div class="clear"></div>
             </div>
         </div>
         <!-- /header -->
         <!-- body container -->
         <?php // if session not active add login class to content container ?>
-        <div id="content_container" class="P20">
+        <div id="content_container" class="P20 login">
             <!-- content -->
-            <div id="content" class="hardWidth center">
-
+            <div id="content" class="hardWidth center login">
+                <?php echo $this->Session->flash(); ?>
                 <?php echo $this->fetch('content'); ?>
             </div>
             <!-- /content -->
         </div>
         <!-- /body container -->
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
+        <div id="footer">
+            <?php echo $this->Html->link(
+                $this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+                'http://www.cakephp.org/',
+                array('target' => '_blank', 'escape' => false)
+            );
+            ?>
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
     $(function(){
