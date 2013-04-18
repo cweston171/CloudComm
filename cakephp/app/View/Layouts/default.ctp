@@ -39,6 +39,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         echo $this->Html->css('tabs');
         echo $this->Html->css('widgets');
 
+        echo $this->Html->script('jquery-1.9.1.min');
+        echo $this->Html->script('jquery-ui-1.10.1.custom.min');
+        echo $this->Html->script('label_over');
+        echo $this->Html->script('additional-methods.min');
+        echo $this->Html->script('jquery.validate.min');
+        echo $this->Html->script('jquery.jscrollpane.min');
+        echo $this->Html->script('jquery.cloud-comm-1.0.0');
+        echo $this->Html->script('wheelIntent');
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -92,6 +101,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $.fn.loader('hide');
+    });
+</script>
 <?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

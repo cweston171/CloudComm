@@ -17,6 +17,10 @@ class AgentsController extends AppController {
 		$this->set('agents', $this->paginate());
 	}
 
+    public function login(){
+        
+    }
+
 /**
  * view method
  *

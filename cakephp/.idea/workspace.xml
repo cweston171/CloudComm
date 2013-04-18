@@ -9,10 +9,11 @@
     <file path="/widgets.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365915716703" ignored="false" />
     <file path="/home.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365892464258" ignored="false" />
     <file path="/LoginModel.php" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365894035194" ignored="false" />
-    <file path="/default.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1366250999949" ignored="false" />
+    <file path="/default.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1366254768246" ignored="false" />
     <file path="/jquery.cloud-comm-1.0.0.js" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365915569497" ignored="false" />
     <file path="/forms.css" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1365913154481" ignored="false" />
     <file path="/login.ctp" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1366252922508" ignored="false" />
+    <file path="/AgentsController.php" changelist="80faaecc-ab0a-457b-b6f9-623de3bc9a1b" time="1366254929990" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +42,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="6" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.257379">
+            <state line="39" column="41" selection-start="1324" selection-end="1324" vertical-scroll-proportion="-12.961538">
               <folding>
                 <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgentsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Controller/AgentsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="8" selection-start="339" selection-end="339" vertical-scroll-proportion="0.32231405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.cloud-comm-1.0.0.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="57" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,9 +104,9 @@
         <option value="$PROJECT_DIR$/app/webroot/css/forms.css" />
         <option value="$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js" />
         <option value="$PROJECT_DIR$/app/webroot/css/widgets.css" />
-        <option value="$PROJECT_DIR$/app/Controller/AgentsController.php" />
         <option value="$PROJECT_DIR$/app/View/Agents/login.ctp" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
+        <option value="$PROJECT_DIR$/app/Controller/AgentsController.php" />
       </list>
     </option>
   </component>
@@ -170,6 +189,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -193,28 +252,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,11 +450,6 @@
         <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.04028436" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/css/widgets.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="23" selection-start="3914" selection-end="3914" vertical-scroll-proportion="0.02312925" />
@@ -455,11 +487,6 @@
         <state line="23" column="21" selection-start="812" selection-end="812" vertical-scroll-proportion="0.46162927" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/AgentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="320" selection-end="320" vertical-scroll-proportion="0.020070838" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Agents/login.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="10" selection-start="696" selection-end="696" vertical-scroll-proportion="-7.9615383">
@@ -467,13 +494,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/jquery.cloud-comm-1.0.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="57" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="6" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.257379">
+        <state line="39" column="41" selection-start="1324" selection-end="1324" vertical-scroll-proportion="-12.961538">
           <folding>
             <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/AgentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="339" selection-end="339" vertical-scroll-proportion="0.32231405">
+          <folding />
         </state>
       </provider>
     </entry>
