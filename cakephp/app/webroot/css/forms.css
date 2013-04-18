@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+form h2 {
+    font-size: 12px;
+}
 input, select, textarea {       
 	margin:0;       
 	padding:0;       
@@ -16,7 +18,7 @@ input, select, textarea {
 
 .field label.over {
 	position: absolute;
-	top: 2px;
+	top: 6px;
 	left: 5px;
 	color: #999;
 }
@@ -25,16 +27,18 @@ input, select, textarea {
 .field input[type="password"].inputBox,
 .field input[type="email"].inputBox,
 .field input[type="checkbox"].inputBox,
+.field input[type="number"].inputBox,
 .field textarea.inputBox,
 .field select.inputBox {
 	border: 1px solid #d4d4d4;
-	padding: 2px;
+	padding: 5px 3px 3px;
 	text-indent: 5px;
 	color: #282828;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	width: 98%;
+    font-size: 12px;
 }
     .field input[type="text"].inputBox.error,
     .field input[type="password"].inputBox.error,
@@ -45,4 +49,9 @@ input, select, textarea {
         border: 1px solid #fc0909;
         background-color: #ffeaea;
     }
-
+    .field.ui-buttonset {
+        height: 30px;
+    }
+    .field.ui-buttonset .input.checkbox {
+        float: left;
+    }

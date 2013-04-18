@@ -42,11 +42,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         echo $this->Html->script('jquery-1.9.1.min');
         echo $this->Html->script('jquery-ui-1.10.1.custom.min');
         echo $this->Html->script('label_over');
-        echo $this->Html->script('additional-methods.min');
         echo $this->Html->script('jquery.validate.min');
+        echo $this->Html->script('additional-methods.min');
         echo $this->Html->script('jquery.jscrollpane.min');
         echo $this->Html->script('jquery.cloud-comm-1.0.0');
-        echo $this->Html->script('wheelIntent');
+        echo $this->Html->script('mwheelIntent');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -74,7 +74,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                 </div>
                 <!-- currcall floater -->
                 <!-- options menu -->
-                <?php //include('partials/optionsMenu.php'); ?>
+                <?php echo $this->element('header/optionsmenu'); ?>
                 <!-- /options menu -->
                 <div class="clear"></div>
             </div>
