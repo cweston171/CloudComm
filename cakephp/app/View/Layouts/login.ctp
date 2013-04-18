@@ -17,15 +17,15 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'CloudComm | Communications In The Cloud');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <?php echo $this->Html->charset(); ?>
     <title>
-        <?php echo $cakeDescription ?>:
         <?php echo $title_for_layout; ?>
+        <?php echo $cakeDescription ?>:
     </title>
     <?php
     echo $this->Html->meta('icon');
