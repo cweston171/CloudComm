@@ -13,8 +13,8 @@ class AgentsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Agent->recursive = 0;
-		$this->set('agents', $this->paginate());
+		$this->autoRender = false;
+        $this->redirect(array('controller'=>'agents','action'=>'dashboard'));
 	}
 
     
@@ -137,7 +137,13 @@ class AgentsController extends AppController {
         $this->redirect(array('controller'=>'agents', 'action'=>'login'));
     }
     
+    /* Dashboard */
     public function dashboard() {
+        /* Must be logged in */
+        if(!$this->isLoggedIn()) {
+            $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
+            $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
+        }
         $this->set('session',$this->Session->read());        
     }
 
@@ -149,6 +155,11 @@ class AgentsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+        /* Must be logged in */
+        if(!$this->isLoggedIn()) {
+            $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
+            $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
+        }
 		if (!$this->Agent->exists($id)) {
 			throw new NotFoundException(__('Invalid agent'));
 		}
@@ -162,6 +173,11 @@ class AgentsController extends AppController {
  * @return void
  */
 	public function add() {
+        /* Must be logged in */
+        if(!$this->isLoggedIn()) {
+            $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
+            $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
+        }
 		if ($this->request->is('post')) {
 			$this->Agent->create();
 			if ($this->Agent->save($this->request->data)) {
@@ -183,6 +199,11 @@ class AgentsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+        /* Must be logged in */
+        if(!$this->isLoggedIn()) {
+            $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
+            $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
+        }
 		if (!$this->Agent->exists($id)) {
 			throw new NotFoundException(__('Invalid agent'));
 		}
@@ -209,6 +230,11 @@ class AgentsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+        /* Must be logged in */
+        if(!$this->isLoggedIn()) {
+            $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
+            $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
+        }
 		$this->Agent->id = $id;
 		if (!$this->Agent->exists()) {
 			throw new NotFoundException(__('Invalid agent'));
