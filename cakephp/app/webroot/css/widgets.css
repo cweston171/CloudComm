@@ -127,6 +127,7 @@
     }
     #login-block .form #login_btn {
         display: block;
+        padding: 5px 10px 0 10px;
         position: absolute;
         text-align: center;
         bottom: 0px;
@@ -167,4 +168,12 @@
             background: linear-gradient(to bottom,  #225488 0%,#7db9e8 5%,#0f2235 100%); /* W3C */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#225488', endColorstr='#0f2235',GradientType=0 ); /* IE6-8 */
             color: #fff;
+        }
+
+        .ui-button .ui-icon.login_btn {
+            background-image: url(../img/icons/login.png);
+            width: 19px;
+            height: 20px;
+            background-position: 0 0;
+            margin-top: -10px;
         }
