@@ -22,7 +22,8 @@
     </div>
     <script type="text/javascript">
         $(function(){
-            $.fn.initCloudCommLogin();
+            //$.fn.initCloudCommLogin();
+            $.fn.loader('hide');
         })
     </script>
 </div>
