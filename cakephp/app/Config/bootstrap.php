@@ -111,3 +111,6 @@ CakePlugin::load('DebugKit');
 
 // Load Twilio configs
 Configure::load('twilio');
+
+// Load Authorize.net configs
+Configure::load('authnet');

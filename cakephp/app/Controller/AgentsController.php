@@ -189,7 +189,7 @@ class AgentsController extends AppController {
 			$this->Agent->create();
 			if ($this->Agent->save($this->request->data)) {
 				$this->Session->setFlash(__('The agent has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'manager'));
 			} else {
 				$this->Session->setFlash(__('The agent could not be saved. Please, try again.'));
 			}
@@ -277,10 +277,10 @@ class AgentsController extends AppController {
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Agent->delete()) {
 			$this->Session->setFlash(__('Agent deleted'));
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => 'manager'));
 		}
 		$this->Session->setFlash(__('Agent was not deleted'));
-		$this->redirect(array('action' => 'index'));
+		$this->redirect(array('action' => 'manager'));
 	}
     
     
