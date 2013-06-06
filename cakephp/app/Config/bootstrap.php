@@ -108,3 +108,6 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load('DebugKit');
+
+// Load Twilio configs
+Configure::load('twilio');
