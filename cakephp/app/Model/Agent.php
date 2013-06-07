@@ -35,9 +35,9 @@ class Agent extends AppModel {
 		'first_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'First Name is required.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -45,9 +45,9 @@ class Agent extends AppModel {
 		'last_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Last Name is required.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -55,9 +55,9 @@ class Agent extends AppModel {
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
-				//'message' => 'Your custom message here',
+				'message' => 'a valid email address is required.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -65,9 +65,9 @@ class Agent extends AppModel {
 		'extension' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+				'message' => 'Extension must contain numbers only.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -75,22 +75,46 @@ class Agent extends AppModel {
 		'username' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Username is required.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+            'minchar' => array(
+                'rule' => array('minLength',6),
+                'message' => 'Username must be 6 characters'
+            ),
+            'maxchar' => array(
+                'rule' => array('maxLength',25),
+                'message' => 'Username must be less than 25 characters'
+            ),
+            'alphanumeric' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Only letters and numbers are allowed.'
+            ),
+            'globalUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'This username is already taken.',
+            )
 		),
 		'password' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Password is required.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+            'rule1' => array(
+                'rule' => array('minLength',8),
+                'message' => 'Password must be at least 8 characters long.'
+            ),
+            'rule2' => array(
+                'rule' => array('maxLength', 35),
+                'message' => 'Password cannot be longer than 35 characters.'
+            )
 		),
 		'is_active' => array(
 			'boolean' => array(
@@ -125,7 +149,7 @@ class Agent extends AppModel {
 		'role' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Role is required.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -184,5 +208,4 @@ class Agent extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-
 }

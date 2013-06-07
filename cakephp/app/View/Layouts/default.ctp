@@ -25,15 +25,14 @@ header('Expires: 0', false);
 header('Last-Modified: '.gmdate('D, d M Y H:i:s') . ' GMT');
 header('Pragma: no-cache');
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$titleDesc = __d('cloudcomm', 'CloudComm');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+		<?php echo $title_for_layout; ?> :: <?php echo $titleDesc ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -100,7 +99,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         <!-- /body container -->
 		<div id="footer">
 			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+					$this->Html->image('cake.power.gif', array('alt' => $titleDesc, 'border' => '0')),
 					'http://www.cakephp.org/',
 					array('target' => '_blank', 'escape' => false)
 				);
