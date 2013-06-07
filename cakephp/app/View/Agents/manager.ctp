@@ -1,6 +1,12 @@
 <div class="agents index">
     <h2><?php echo __('Agents Manager'); ?></h2>
     
+    <!-- Testing Only -->
+    <pre>
+    <?php var_dump($authResponse); ?>
+    </pre>
+    <!-- /Testing Only -->
+    
     <?php echo $this->Html->link(__('New Agent'), array('action' => 'add')); ?>
     
     <table cellpadding="0" cellspacing="0">

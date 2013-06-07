@@ -286,6 +286,22 @@ class AgentsController extends AppController {
     
     public function manager() {
         $this->set('title_for_layout', 'Agents Manager');
+        $this->AuthorizeNet = $this->Components->load('AuthorizeNet');
+        
+        /* test only */
+        $custInfo = array(
+            'first_name' => 'Test',
+            'last_name' => 'Person 1',
+            'address'   => '123 Test St',
+            'city'      => 'Hometown',
+            'state'     => 'NY',
+            'zip'       => '12020',
+            'country'   => 'USA',
+            'company'   => 'CloudComm, LLC'
+        );
+        $response = $this->AuthorizeNet->chargeCard(Configure::read('authNet.development.loginId'),Configure::read('authNet.development.transKey'),'AUTH_CAPTURE','','4131499568188591','03','15','372','1','5.00','2.00','3.00','test transaction #1',$custInfo,'test1@cloudcomm.com','518-885-7180','8016347989',$custInfo,1,'127.0.0.1','1');
+        $this->set('authResponse',$response);
+        /* /test only */
         
         /* Must be logged in */
         if(!$this->isLoggedIn()) {
