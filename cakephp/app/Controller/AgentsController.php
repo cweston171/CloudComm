@@ -171,23 +171,60 @@ class AgentsController extends AppController {
  * @return void
  */
 	public function add() {
+        $this->set('title_for_layout', 'Add New Agent');
+        
         /* Must be logged in */
         if(!$this->isLoggedIn()) {
             $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
             $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
         }
-		if ($this->request->is('post')) {
-			$this->Agent->create();
-			if ($this->Agent->save($this->request->data)) {
-				$this->Session->setFlash(__('The agent has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The agent could not be saved. Please, try again.'));
-			}
-		}
-		$clients = $this->Agent->Client->find('list');
-		$this->set(compact('clients'));
-	}
+        
+        /* Must be Admin */
+        if(!$this->Session->read('Agent.role') == "Admin") {
+            $this->Session->setFlash(__('You must be an Admin to access this page.'));
+            $this->redirect(array('controller'=>'agents','action'=>'dashboard'));            
+        }
+        
+        if ($this->request->is('post')) {
+            $this->Agent->create();
+            if ($this->Agent->save($this->request->data)) {
+                $this->Session->setFlash(__('The agent has been saved'));
+                $this->redirect(array('action' => 'manager'));
+            } else {
+                $this->Session->setFlash(__('The agent could not be saved. Please, try again.'));
+            }
+        }
+        
+        // Set Role Drop Down
+        $roles = array('Admin'=>'Admin', 'Supervisor'=>'Supervisor', 'Agent'=>'Agent');
+        $this->set('roles',$roles);
+        
+        // Set Available Extensions
+        $extensionConditions = array(
+            'conditions' => array(
+                'Agent.client_id' => $this->Session->read('Agent.client_id')
+            ),
+            'fields' => array('Agent.extension'),
+            'recursive' => -1
+        );
+        $takenExtensions = $this->Agent->find('all',$extensionConditions);
+        
+        foreach ($takenExtensions as $key=>$value)
+        {
+            $takenExtensionsArray[] = $value['Agent']['extension'];
+        }
+        
+        $x = 1000;
+        while($x <= 9999)
+        {
+            if(!in_array($x,$takenExtensionsArray))
+            {
+                $availableExtensions[$x] = $x;
+            }                        
+            $x++;
+        }
+        $this->set('availableExtensions', $availableExtensions);
+    }
 
 /**
  * edit method
@@ -245,6 +282,45 @@ class AgentsController extends AppController {
 		$this->Session->setFlash(__('Agent was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+    
+    public function manager() {
+        $this->set('title_for_layout', 'Agents Manager');
+        $this->AuthorizeNet = $this->Components->load('AuthorizeNet');
+        
+        /* test only */
+        $custInfo = array(
+            'first_name' => 'Test',
+            'last_name' => 'Person 1',
+            'address'   => '123 Test St',
+            'city'      => 'Hometown',
+            'state'     => 'NY',
+            'zip'       => '12020',
+            'country'   => 'USA',
+            'company'   => 'CloudComm, LLC'
+        );
+        $response = $this->AuthorizeNet->chargeCard(Configure::read('authNet.development.loginId'),Configure::read('authNet.development.transKey'),'AUTH_CAPTURE','','4131499568188591','03','15','372','1','5.00','2.00','3.00','test transaction #1',$custInfo,'test1@cloudcomm.com','518-885-7180','8016347989',$custInfo,1,'127.0.0.1','1');
+        $this->set('authResponse',$response);
+        /* /test only */
+        
+        /* Must be logged in */
+        if(!$this->isLoggedIn()) {
+            $this->Session->setFlash(__('You must be logged in. Please log in below to continue.'), 'default', array(), 'bad');
+            $this->redirect(array('controller'=>'agents', 'action'=>'login'));           
+        }
+        
+        /* Must be Admin */
+        if(!$this->Session->read('Agent.role') == "Admin") {
+            $this->Session->setFlash(__('You must be an Admin to access this page.'));
+            $this->redirect(array('controller'=>'agents','action'=>'dashboard'));            
+        }
+        
+        /* Display agents only for their company */
+        $this->paginate = array(
+            'conditions' => array('Agent.client_id' => $this->Session->read('Agent.client_id')),
+            'recursive' => -1                
+        );
+        $this->set('agents', $this->paginate());
+    }
 
 /**
  * admin_index method
