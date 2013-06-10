@@ -185,6 +185,21 @@ class AgentsController extends AppController {
             $this->redirect(array('controller'=>'agents','action'=>'dashboard'));            
         }
         
+        /* Must have active agent licenses */
+        $licenseCheckResponse = $this->hasAvailableAgentLicenses($this->Session->read('Agent.client_id'));
+        $this->set('totalLicenseCount',$licenseCheckResponse['totalLicenseCount']);
+        $this->set('usedLicenseCount',$licenseCheckResponse['usedLicenseCount']);
+        if($licenseCheckResponse['hasActiveLicenses'] === false)
+        {
+            $this->set('displayPurchaseLicense', true);
+        }
+        else
+        {
+            $this->set('displayPurchaseLicense', false);
+        }
+        
+        
+        
         if ($this->request->is('post')) {
             $this->Agent->create();
             if ($this->Agent->save($this->request->data)) {
@@ -298,7 +313,7 @@ class AgentsController extends AppController {
             'country'   => 'USA',
             'company'   => 'CloudComm, LLC'
         );
-        $response = $this->AuthorizeNet->chargeCard(Configure::read('authNet.development.loginId'),Configure::read('authNet.development.transKey'),'AUTH_CAPTURE','','4131499568188591','03','15','372','1','5.00','2.00','3.00','test transaction #1',$custInfo,'test1@cloudcomm.com','518-885-7180','8016347989',$custInfo,1,'127.0.0.1','1');
+        //$response = $this->AuthorizeNet->chargeCard(Configure::read('authNet.development.loginId'),Configure::read('authNet.development.transKey'),'AUTH_CAPTURE','','4131499568188591','03','15','372','1','5.00','2.00','3.00','test transaction #1',$custInfo,'test1@cloudcomm.com','518-885-7180','8016347989',$custInfo,1,'127.0.0.1','1');
         $this->set('authResponse',$response);
         /* /test only */
         

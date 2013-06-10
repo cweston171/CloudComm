@@ -40,4 +40,42 @@ class AppController extends Controller {
             return false;
         }
     }
+    
+    function hasAvailableAgentLicenses($clientId)
+    {
+        $return = array();
+        
+        // Get Licenses Count
+        $licenseCountConditions = array(
+            'conditions' => array(
+                'Client.id' => $clientId,
+                'Client.active' => 1 // must be active
+            ),
+            'recursive' => -1,
+            'fields' => array('Client.license_count'),
+            'limit' => 1
+        );
+        $licenseCount = $this->Agent->Client->find('all',$licenseCountConditions);
+        $licenseCount = $licenseCount[0]['Client']['license_count'];
+        
+        // Get Active Agents
+        $activeAgentsConditions = array(
+            'conditions' => array(
+                'Agent.client_id' => $clientId,
+                'Agent.is_active' => 1
+            ),
+            'recursive' => -1
+        );
+        $usedLicenseCount = $this->Agent->find('count',$activeAgentsConditions);
+        
+        // Compare Total to Active
+        if($usedLicenseCount >= $licenseCount) {
+            $return['hasActiveLicenses'] = false;
+        } else {
+            $return['hasActiveLicenses'] = true;
+        }
+        $return['usedLicenseCount'] = $usedLicenseCount;
+        $return['totalLicenseCount'] = $licenseCount;
+        return $return;
+    }
 }

@@ -3,6 +3,16 @@
 </div>
 <div class="agents form left width50" style="padding: 8px;">
 
+<?php
+    if($displayPurchaseLicense === true)
+    {
+        // display purchase license popup
+        print "<script type=\"text/javascript\">alert('No Active Agent Licenses!');</script>";
+    }
+?>
+
+<h4>Your company has purchased <?php echo $totalLicenseCount; ?> Agent Licenses of which <?php echo $usedLicenseCount; ?> have been used. You have <?php echo $totalLicenseCount - $usedLicenseCount; ?> agent licesnes left (not including the one you are attempting to add)</h4>
+
 <!-- Error Box -->
 <?php echo $this->Session->flash(); ?>
 <!-- /Error Box -->

@@ -93,6 +93,11 @@ class ClientsController extends AppController {
 		$this->Session->setFlash(__('Client was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+    
+    /* Purchase User Licenses */
+    public function purchase_licenses() {
+        
+    }
 
 /**
  * admin_index method
