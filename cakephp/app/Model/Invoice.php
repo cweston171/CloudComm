@@ -54,7 +54,7 @@ class Invoice extends AppModel {
 		),
 		'due_date' => array(
 			'datetime' => array(
-				'rule' => array('datetime'),
+				'rule' => array('date'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

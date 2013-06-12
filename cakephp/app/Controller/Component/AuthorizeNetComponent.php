@@ -62,7 +62,7 @@
             'x_email'               => $email,
             'x_cust_id'             => $customerId,
             'x_customer_ip'         => $customerIp,
-            'x_ship_to_fist_name'   => $shippingInfo['first_name'],
+            'x_ship_to_first_name'   => $shippingInfo['first_name'],
             'x_ship_to_last_name'   => $shippingInfo['last_name'],
             'x_ship_to_company'     => $shippingInfo['company'],
             'x_ship_to_address'     => $shippingInfo['address'],
