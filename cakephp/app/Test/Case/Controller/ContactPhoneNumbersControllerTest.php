@@ -1,11 +1,11 @@
 <?php
-App::uses('PhoneNumbersController', 'Controller');
+App::uses('ContactPhoneNumbersController', 'Controller');
 
 /**
- * PhoneNumbersController Test Case
+ * ContactPhoneNumbersController Test Case
  *
  */
-class PhoneNumbersControllerTest extends ControllerTestCase {
+class ContactPhoneNumbersControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,15 +13,16 @@ class PhoneNumbersControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.phone_number',
+		'app.contact_phone_number',
+		'app.contact',
 		'app.client',
 		'app.agent',
 		'app.account_action',
 		'app.internal_phone_number',
-		'app.contact',
 		'app.invoice',
 		'app.invoice_item',
 		'app.transaction',
+		'app.phone_number',
 		'app.campaign'
 	);
 

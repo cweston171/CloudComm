@@ -1,11 +1,11 @@
 <?php
-App::uses('PhoneNumber', 'Model');
+App::uses('ContactPhoneNumber', 'Model');
 
 /**
- * PhoneNumber Test Case
+ * ContactPhoneNumber Test Case
  *
  */
-class PhoneNumberTest extends CakeTestCase {
+class ContactPhoneNumberTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,15 +13,16 @@ class PhoneNumberTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.phone_number',
+		'app.contact_phone_number',
+		'app.contact',
 		'app.client',
 		'app.agent',
 		'app.account_action',
 		'app.internal_phone_number',
-		'app.contact',
 		'app.invoice',
 		'app.invoice_item',
 		'app.transaction',
+		'app.phone_number',
 		'app.campaign'
 	);
 
@@ -32,7 +33,7 @@ class PhoneNumberTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->PhoneNumber = ClassRegistry::init('PhoneNumber');
+		$this->ContactPhoneNumber = ClassRegistry::init('ContactPhoneNumber');
 	}
 
 /**
@@ -41,7 +42,7 @@ class PhoneNumberTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->PhoneNumber);
+		unset($this->ContactPhoneNumber);
 
 		parent::tearDown();
 	}
