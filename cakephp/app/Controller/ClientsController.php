@@ -168,9 +168,16 @@ class ClientsController extends AppController {
                     {
                         /* Charge Successful */
                         /* Add credits to clients account */
-                        $this->Client->saveField('license_count',$client['Client']['license_count'] + $this->request->data('Client.purchase_qty'));
-                        $this->Session->setFlash(__('Credits Added Successfully!','notification'));
-                        $this->redirect(array('controller'=>'agents','action'=>'add'));                        
+                        $this->Client->id = $this->Session->read('Agent.client_id');
+                        if($this->Client->saveField('license_count',$client['Client']['license_count'] + $this->request->data('Client.purchase_qty'))) {
+                            $this->Session->setFlash(__('Credits Added Successfully!','notification'));
+                            $this->redirect(array('controller'=>'agents','action'=>'add'));                        
+                        }
+                        else
+                        {
+                            /* Failed to update license count! */
+                            throw new InternalErrorException(__('Unable to update license count.'));
+                        }
                     }
                     else
                     {
