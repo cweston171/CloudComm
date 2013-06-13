@@ -189,7 +189,7 @@ class ClientsController extends AppController {
                 {
                     /* Charge Failed */
                     $this->Session->setFlash(__('Charge Declined. Please try again.','error'));
-                    $this->redirect(array('controller'=>'invoices','action'=>'view'));
+                    $this->redirect(array('controller'=>'invoices','action'=>'view',$this->Client->Invoice->id,'showfields'));
                 }
                 exit;
             } else {
