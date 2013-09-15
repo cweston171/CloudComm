@@ -48,27 +48,8 @@ class PhoneNumbersController extends AppController {
 			}
 		}
         
-        /* Initiate Twilio Client */
-        App::import('Vendor', 'twilio-php'.DS.'Services'.DS.'Twilio');
-        $twilioClient = new Services_Twilio(Configure::read('Twilio.development.sid'),Configure::read('Twilio.development.authToken'));
-        
-        var_dump($twilioClient);exit;
-        
-        if($twilioClient)
-        {
-            $numbers = $twilioClient->account->available_phone_numbers->getList('US', 'Local', array(
-                    "AreaCode" => "518"
-                ));
-            foreach($numbers->available_phone_numbers as $number) {
-                echo $number->phone_number;
-            }
-        }
-        else
-        {
-            die("Unable to load Twilio SDK!");
-        }
-        
-        
+        /* make twilio call for available numbers */
+        $this->Twilio = $this->Components->load('Twilio');
         
 		$clients = $this->PhoneNumber->Client->find('list');
 		$agents = $this->PhoneNumber->Agent->find('list');
